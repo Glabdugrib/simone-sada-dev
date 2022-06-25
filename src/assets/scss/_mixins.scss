@@ -1,0 +1,13 @@
+@import './variables';
+
+@mixin hamburger-line {
+  width: 25px;
+  height: 4px;
+  background: $hamburger;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+// to add mixin:
+// @include test 
