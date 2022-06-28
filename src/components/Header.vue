@@ -28,10 +28,7 @@
             <a href="/#contact">{{ $t("nav.contact") }}</a>
           </li>
           <li>
-            <select name="languages" id="languages-select">
-              <option value="en">EN</option>
-              <option value="it">IT</option>
-            </select>
+            <LanguageSwitcher/>
           </li>
         </ol>
       </div>
@@ -67,8 +64,13 @@
 </template>
 
 <script>
+import LanguageSwitcher from './LanguageSwitcher.vue'
+
 export default {
   name: "MainHeader",
+  components: {
+    LanguageSwitcher
+  },
   data() {
     return {
       dropdownIsOpen: false,
