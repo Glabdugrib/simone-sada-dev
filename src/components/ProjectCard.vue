@@ -1,0 +1,409 @@
+<template>
+  <div class="project">
+    <figure class="project-image">
+      <img src="../assets/images/Cover-test.png" alt="" />
+    </figure>
+    <div class="project-content">
+      <h4 class="project-overline">Sottotitolo</h4>
+      <h3 class="project-title"><a href="#">Titolo del progetto</a></h3>
+      <p class="project-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet,
+        voluptates earum iusto beatae at recusandae aliquam explicabo
+        consequuntur suscipit.
+      </p>
+      <ul class="project-technologies">
+        <li>Vue</li>
+        <li>Scss</li>
+        <li>Laravel</li>
+      </ul>
+      <ul class="project-links">
+        <li>
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-github"
+            >
+              <title>GitHub</title>
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              ></path></svg
+          ></a>
+        </li>
+        <li>
+          <a href=""
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-external-link"
+            >
+              <title>External Link</title>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/scss/_variables.scss";
+@import "../assets/scss/style.scss";
+
+.project {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .project-image {
+    width: 60%;
+    aspect-ratio: calc(1920 / 1080);
+    margin: 0;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color: black, $alpha: 0.5);
+      transition: all ease-in-out 0.5s;
+      cursor: pointer;
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba($color: black, $alpha: 0);
+      }
+    }
+
+    img {
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  }
+
+  .project-content {
+    width: 50%;
+    text-align: right;
+    z-index: 3;
+
+    .project-overline {
+      margin: 10px 0;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      font-size: 14px;
+      color: $highlight;
+    }
+
+    .project-title {
+      font-size: clamp(24px, 5vw, 28px);
+      color: $lightest-slate;
+      margin-bottom: 25px;
+      cursor: pointer;
+      transition: color ease-in-out 0.3s;
+
+      &:hover {
+        color: $highlight;
+      }
+    }
+
+    .project-description {
+      padding: 25px;
+      background-color: $secundary-bg;
+      color: $light-slate;
+      box-shadow: 0 10px 30px -15px $shadow;
+      border-radius: 3px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    .project-technologies {
+      margin: 25px 0 10px 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      color: $light-slate;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    .project-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 99;
+      color: $light-slate;
+
+      li {
+        padding: 10px;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          color: $highlight;
+        }
+
+        a svg {
+          min-width: 22px;
+          max-width: 22px;
+          aspect-ratio: 1;
+
+          &.github {
+            min-width: 17px;
+            max-width: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  // Allineamento a sinistra
+  &:nth-of-type(2n) {
+    justify-content: flex-start;
+
+    .project-image {
+      left: auto;
+      right: 0;
+    }
+
+    .project-content {
+      // right: auto;
+      // left: 0;
+      text-align: left;
+
+      .project-technologies {
+        justify-content: flex-start;
+      }
+
+      .project-links {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .project {
+    margin-bottom: 50px;
+
+    .project-content {
+      width: 65%;
+    }
+  }
+}
+
+// Card version
+@media screen and (max-width: 768px) {
+  .project {
+    // margin-bottom: 25px;
+    // border: 1px solid yellow;
+    // position: relative;
+    // width: 100%;
+    // margin-bottom: 100px;
+    display: block;
+    // justify-content: flex-end;
+    background: url("../assets/images/Cover-test.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      background-color: rgba($color: $secundary-bg, $alpha: 0.9);
+    }
+
+    .project-image {
+      display: none;
+      // width: auto;
+      // aspect-ratio: calc(1920 / 1080);
+      // margin: 0;
+      // position: relative;
+      // border-radius: 3px;
+      // overflow: hidden;
+      // position: absolute;
+      // top: 0;
+      // bottom: 0;
+      // left: 0;
+      // right: 0;
+      //transform: translate(0, -50%);
+
+      // &::after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+      //   background-color: rgba($color: black, $alpha: 0.5);
+      //   transition: all ease-in-out 0.5s;
+      //   cursor: pointer;
+      // }
+
+      // &:hover {
+      //   &::after {
+      //     background-color: rgba($color: black, $alpha: 0);
+      //   }
+      // }
+
+      // img {
+      //   max-height: 100%;
+      //   object-fit: cover;
+      //   object-position: center;
+      //   display: block;
+      // }
+    }
+
+    .project-content {
+      width: 100%;
+      text-align: left;
+      z-index: 3;
+
+      // .project-overline {
+      //   margin: 10px 0;
+      //   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+      //     monospace;
+      //   font-size: 14px;
+      //   color: $highlight;
+      // }
+
+      // .project-title {
+      //   font-size: clamp(24px, 5vw, 28px);
+      //   color: $lightest-slate;
+      //   margin-bottom: 25px;
+      //   cursor: pointer;
+      //   transition: color ease-in-out 0.3s;
+
+      //   &:hover {
+      //     color: $highlight;
+      //   }
+      // }
+
+      .project-description {
+        padding: 0;
+        background-color: transparent;
+        // color: $light-slate;
+        box-shadow: none;
+        // border-radius: 3px;
+        // font-size: 17px;
+        // line-height: 24px;
+      }
+
+      .project-technologies {
+        // margin: 25px 0 10px 0;
+        // display: flex;
+        justify-content: flex-start;
+        // gap: 20px;
+        // font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+        //   monospace;
+        // color: $light-slate;
+
+        // li {
+        //   margin-bottom: 5px;
+        // }
+      }
+
+      .project-links {
+        // margin-top: 10px;
+        // display: flex;
+        justify-content: flex-start;
+        //z-index: 99;
+
+        // li {
+        //   padding: 10px;
+        //   transition: all ease-in-out 0.3s;
+
+        //   &:hover {
+        //     transform: scale(1.1);
+        //     color: $highlight;
+        //   }
+
+        //   a svg {
+        //     min-width: 22px;
+        //     max-width: 22px;
+        //     aspect-ratio: 1;
+        //   }
+        // }
+      }
+    }
+
+    // &:nth-of-type(2n) {
+    //   justify-content: flex-start;
+
+    //   .project-image {
+    //     left: auto;
+    //     right: 0;
+    //   }
+
+    //   .project-content {
+    //     // right: auto;
+    //     // left: 0;
+    //     text-align: left;
+
+    //     .project-technologies {
+    //       justify-content: flex-start;
+    //     }
+
+    //     .project-links {
+    //       justify-content: flex-start;
+    //     }
+    //   }
+    // }
+  }
+}
+</style>
