@@ -1,8 +1,10 @@
 <template>
   <div class="project" :style=" false ? { backgroundImage: 'url(' + require(`@/assets/images/${project.image}`) + ')' } : ''">
+    <!-- Image -->
     <figure class="project-image">
       <img :src="require(`../assets/images/${project.image}`)" alt="" />
     </figure>
+    <!-- Content -->
     <div class="project-content">
       <h4 class="project-overline">{{ project.overline }}</h4>
       <h3 class="project-title">
@@ -69,7 +71,7 @@ export default {
   },
   data() {
     return {
-      smallestScreenActive: false
+      smallestScreenActive: false // active when screend under 768px
     }
   },
   methods: {
@@ -96,39 +98,38 @@ export default {
 
 .project {
   position: relative;
-  width: 100%;
-  margin-bottom: 100px;
   display: flex;
   justify-content: flex-end;
-  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+  width: 100%;
+  margin-bottom: 100px;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif; // [TODO] check fonts
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
+  // Image
   .project-image {
-    width: 60%;
-    aspect-ratio: calc(1920 / 1080);
-    margin: 0;
-    position: relative;
-    border-radius: 3px;
-    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
+    overflow: hidden;
+    width: 60%;
+    aspect-ratio: calc(1920 / 1080);
+    margin: 0;
+    border-radius: 3px;
 
     &::after {
       content: "";
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba($color: black, $alpha: 0.5);
+      display: block;
       transition: all ease-in-out 0.5s;
+      background-color: rgba($color: black, $alpha: 0.5);
       cursor: pointer;
     }
 
@@ -139,17 +140,18 @@ export default {
     }
 
     img {
+      display: block;
       max-height: 100%;
       object-fit: cover;
       object-position: center;
-      display: block;
     }
   }
 
+  // Content
   .project-content {
+    z-index: 3;
     width: 50%;
     text-align: right;
-    z-index: 3;
 
     .project-overline {
       margin: 10px 0;
@@ -159,11 +161,11 @@ export default {
     }
 
     .project-title {
-      font-size: clamp(24px, 5vw, 28px);
-      color: $lightest-slate;
+      transition: color ease-in-out 0.3s;
       margin-bottom: 25px;
       cursor: pointer;
-      transition: color ease-in-out 0.3s;
+      font-size: clamp(24px, 5vw, 28px);
+      color: $lightest-slate;
 
       &:hover {
         color: $highlight;
@@ -181,10 +183,10 @@ export default {
     }
 
     .project-technologies {
-      margin: 25px 0 10px 0;
       display: flex;
       justify-content: flex-end;
       gap: 20px;
+      margin: 25px 0 10px 0;
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
       color: $light-slate;
 
@@ -194,15 +196,15 @@ export default {
     }
 
     .project-links {
-      margin-top: 10px;
+      z-index: 99;
       display: flex;
       justify-content: flex-end;
-      z-index: 99;
+      margin-top: 10px;
       color: $light-slate;
 
       li {
-        padding: 10px;
         transition: all ease-in-out 0.3s;
+        padding: 10px;
 
         &:hover {
           transform: scale(1.1);
@@ -223,7 +225,7 @@ export default {
     }
   }
 
-  // Allineamento a sinistra
+  // Reverse allignment
   &:nth-of-type(2n) {
     justify-content: flex-start;
 
@@ -233,8 +235,6 @@ export default {
     }
 
     .project-content {
-      // right: auto;
-      // left: 0;
       text-align: left;
 
       .project-technologies {
@@ -247,6 +247,9 @@ export default {
     }
   }
 }
+
+
+// *** MEDIA QUERIES ***
 
 @media screen and (max-width: 1200px) {
   .project {
@@ -270,172 +273,51 @@ export default {
   }
 }
 
-// Card version
+// Smallest version
 @media screen and (max-width: 768px) {
   .project {
-    // margin-bottom: 25px;
-    // border: 1px solid yellow;
-    // position: relative;
-    // width: 100%;
-    // margin-bottom: 100px;
+    z-index: 2;
     display: block;
-    // justify-content: flex-end;
-    // require(`../assets/images/${project.image}`)
-    // background: url("../assets/images/Cover-test.png");
     background-size: cover;
     background-position: center;
     padding: 40px;
-    z-index: 2;
+    
 
     &::after {
       content: "";
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       z-index: -1;
+      display: block;
       background-color: rgba($color: $secundary-bg, $alpha: 0.9);
     }
 
     .project-image {
       display: none;
-      // width: auto;
-      // aspect-ratio: calc(1920 / 1080);
-      // margin: 0;
-      // position: relative;
-      // border-radius: 3px;
-      // overflow: hidden;
-      // position: absolute;
-      // top: 0;
-      // bottom: 0;
-      // left: 0;
-      // right: 0;
-      //transform: translate(0, -50%);
-
-      // &::after {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   right: 0;
-      //   bottom: 0;
-      //   background-color: rgba($color: black, $alpha: 0.5);
-      //   transition: all ease-in-out 0.5s;
-      //   cursor: pointer;
-      // }
-
-      // &:hover {
-      //   &::after {
-      //     background-color: rgba($color: black, $alpha: 0);
-      //   }
-      // }
-
-      // img {
-      //   max-height: 100%;
-      //   object-fit: cover;
-      //   object-position: center;
-      //   display: block;
-      // }
     }
 
     .project-content {
+      z-index: 3;
       width: 100%;
       text-align: left;
-      z-index: 3;
-
-      // .project-overline {
-      //   margin: 10px 0;
-      //   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
-      //     monospace;
-      //   font-size: 14px;
-      //   color: $highlight;
-      // }
-
-      // .project-title {
-      //   font-size: clamp(24px, 5vw, 28px);
-      //   color: $lightest-slate;
-      //   margin-bottom: 25px;
-      //   cursor: pointer;
-      //   transition: color ease-in-out 0.3s;
-
-      //   &:hover {
-      //     color: $highlight;
-      //   }
-      // }
 
       .project-description {
+        box-shadow: none;
         padding: 0;
         background-color: transparent;
-        // color: $light-slate;
-        box-shadow: none;
-        // border-radius: 3px;
-        // font-size: 17px;
-        // line-height: 24px;
       }
 
       .project-technologies {
-        // margin: 25px 0 10px 0;
-        // display: flex;
         justify-content: flex-start;
-        // gap: 20px;
-        // font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
-        //   monospace;
-        // color: $light-slate;
-
-        // li {
-        //   margin-bottom: 5px;
-        // }
       }
 
       .project-links {
-        // margin-top: 10px;
-        // display: flex;
         justify-content: flex-start;
-        //z-index: 99;
-
-        // li {
-        //   padding: 10px;
-        //   transition: all ease-in-out 0.3s;
-
-        //   &:hover {
-        //     transform: scale(1.1);
-        //     color: $highlight;
-        //   }
-
-        //   a svg {
-        //     min-width: 22px;
-        //     max-width: 22px;
-        //     aspect-ratio: 1;
-        //   }
-        // }
       }
     }
-
-    // &:nth-of-type(2n) {
-    //   justify-content: flex-start;
-
-    //   .project-image {
-    //     left: auto;
-    //     right: 0;
-    //   }
-
-    //   .project-content {
-    //     // right: auto;
-    //     // left: 0;
-    //     text-align: left;
-
-    //     .project-technologies {
-    //       justify-content: flex-start;
-    //     }
-
-    //     .project-links {
-    //       justify-content: flex-start;
-    //     }
-    //   }
-    // }
   }
 }
 </style>
