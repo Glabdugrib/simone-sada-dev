@@ -1,25 +1,23 @@
 <template>
-  <div class="project">
+  <div class="project" :style=" false ? { backgroundImage: 'url(' + require(`@/assets/images/${project.image}`) + ')' } : ''">
     <figure class="project-image">
-      <img src="../assets/images/Cover-test.png" alt="" />
+      <img :src="require(`../assets/images/${project.image}`)" alt="" />
     </figure>
     <div class="project-content">
-      <h4 class="project-overline">Sottotitolo</h4>
-      <h3 class="project-title"><a href="#">Titolo del progetto</a></h3>
-      <p class="project-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet,
-        voluptates earum iusto beatae at recusandae aliquam explicabo
-        consequuntur suscipit.
-      </p>
+      <h4 class="project-overline">{{ project.overline }}</h4>
+      <h3 class="project-title">
+        <a href="#">{{ project.title }}</a>
+      </h3>
+      <p class="project-description">{{ project.description }}</p>
       <ul class="project-technologies">
-        <li>Vue</li>
-        <li>Scss</li>
-        <li>Laravel</li>
+        <li v-for="(technology, i) in project.technologies" :key="`tech-${i}`">
+          {{ technology }}
+        </li>
       </ul>
       <ul class="project-links">
         <li>
-          <a href=""
-            ><svg
+          <a href="">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
               viewBox="0 0 24 24"
@@ -28,7 +26,6 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="feather feather-github"
             >
               <title>GitHub</title>
               <path
@@ -63,7 +60,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    project: {
+      type: Object,
+      require: true,
+    },
+  },
+  data() {
+    return {
+      smallestScreenActive: false
+    }
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth <= 768) {
+        this.smallestScreenActive = true
+      } else {
+        this.smallestScreenActive = false
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -76,7 +100,8 @@ export default {};
   margin-bottom: 100px;
   display: flex;
   justify-content: flex-end;
-  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -239,6 +264,12 @@ export default {};
   }
 }
 
+@media screen and (max-width: 768px) {
+  .project {
+
+  }
+}
+
 // Card version
 @media screen and (max-width: 768px) {
   .project {
@@ -249,7 +280,8 @@ export default {};
     // margin-bottom: 100px;
     display: block;
     // justify-content: flex-end;
-    background: url("../assets/images/Cover-test.png");
+    // require(`../assets/images/${project.image}`)
+    // background: url("../assets/images/Cover-test.png");
     background-size: cover;
     background-position: center;
     padding: 40px;

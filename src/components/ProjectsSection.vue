@@ -1,25 +1,30 @@
 <template>
   <section id="projects">
     <h2 class="title">Eccoci quà</h2>
-    <Project/>
-    <Project/>
-    <Project/>
-    <Project/>
+    <Project :project="projects[0]" />
+    <Project :project="projects[0]" />
+    <Project :project="projects[1]" />
+    <Project :project="projects[0]" />
   </section>
 </template>
 
 <script>
-import Project from './ProjectCard.vue'
+import Project from "./ProjectCard.vue"
 
 export default {
   components: {
-    Project
+    Project,
+  },
+  computed: {
+    projects() {
+      return this.$t('projects') // attinge dai file locale delle lingue
+    }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/style.scss';
+@import "../assets/scss/style.scss";
 
 #projects {
   width: 100%;
@@ -32,7 +37,6 @@ export default {
     color: $lightest-slate;
     display: flex;
     align-items: center;
-    // position: relative;
 
     &::before {
       content: "03.";
@@ -50,10 +54,6 @@ export default {
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      // position: absolute;
-      // top: 50%;
-      // left: 100%;
-      // transform: translate(0, -50%);
       background-color: rgba($color: $light-slate, $alpha: 0.3);
     }
   }
