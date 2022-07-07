@@ -18,6 +18,7 @@ export default {};
 
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
+@import "../assets/scss/style.scss";
 
 .locale-changer {
   background-color: transparent;

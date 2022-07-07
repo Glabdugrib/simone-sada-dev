@@ -5,30 +5,68 @@
 @import './mixins';
 
 * {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 img {
-   max-width: 100%;
-   display: block;
+  max-width: 100%;
+  display: block;
 }
 
-ul, ol {
-   list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 a {
-   color: inherit;
-   text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 #app {
-   font-family: Avenir, Helvetica, Arial, sans-serif;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   text-align: center;
-   color: #2c3e50;
-   margin-top: 100px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: $primary-bg;
+  margin-top: 100px;
+  user-select: none;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 150px;
+  // border: 1px solid red;
+}
+
+section {
+  margin: 0px auto;
+  padding: 100px 0px;
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    padding: 0 25px;
+  }
 }
