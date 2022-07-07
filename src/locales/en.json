@@ -71,5 +71,10 @@
       ],
       "image": "Cover-test1.png"
     }
-  ]
+  ],
+  "emailInfo": {
+    "email": "simone.sada93@gmail.com",
+    "subject": "Mail from my website",
+    "body": ""
+  }
 }

@@ -13,20 +13,23 @@
       <!-- <router-link :to="`/${$i18n.locale}`">Home</router-link>
       <router-link :to="`/${$i18n.locale}/foo`">Foo</router-link> -->
       <div class="container">
-        <ProjectsSection/>
+        <Projects/>
       </div>
+      <Contacts/>
    </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
+import Projects from './components/ProjectsSection.vue'
+import Contacts from './components/ContactsSection.vue'
 
 export default {
    name: 'App',
    components: {
       Header,
-      ProjectsSection
+      Projects,
+      Contacts
    }
 }
 </script>

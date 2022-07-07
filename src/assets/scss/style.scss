@@ -48,6 +48,35 @@ section {
   margin: 0px auto;
   padding: 100px 0px;
   max-width: 1000px;
+  width: 100%;
+
+  .section-title {
+    margin: 10px 0 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    color: $lightest-slate;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      display: block;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      color: $highlight;
+      font-weight: 400;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      flex-grow: 1;
+      height: 1px;
+      margin-left: 20px;
+      background-color: rgba($color: $light-slate, $alpha: 0.3);
+    }
+  }
 }
 
 @media screen and (max-width: 1080px) {
