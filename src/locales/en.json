@@ -49,6 +49,27 @@
         }
       ],
       "image": "Cover-test1.png"
+    },
+    {
+      "title": "Test",
+      "overline": "Ciao ciao",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A amet, voluptates earum iusto beatae at recusandae aliquam explicabo consequuntur suscipit.",
+      "technologies": [
+        "React",
+        "Scss",
+        "Kiba"
+      ],
+      "links": [
+        {
+          "name": "Github",
+          "url": "..."
+        },
+        {
+          "name": "Website",
+          "url": "..."
+        }
+      ],
+      "image": "Cover-test1.png"
     }
   ]
 }

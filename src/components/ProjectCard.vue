@@ -267,11 +267,11 @@ export default {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .project {
+// @media screen and (max-width: 768px) {
+//   .project {
 
-  }
-}
+//   }
+// }
 
 // Smallest version
 @media screen and (max-width: 768px) {
