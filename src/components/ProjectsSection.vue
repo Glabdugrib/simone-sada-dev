@@ -1,6 +1,6 @@
 <template>
   <section id="projects">
-    <h2 class="title">My projects</h2>
+    <h2 class="section-title">My projects</h2>
     <!-- Filtro -->
     <div class="filter">
       <ul>
@@ -73,35 +73,13 @@ export default {
 @import "../assets/scss/style.scss";
 
 #projects {
-  width: 100%;
+  counter-increment: section;
 
-  .title {
+  .section-title {
     margin: 10px 0 20px 0;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 36px;
-    color: $lightest-slate;
-    display: flex;
-    align-items: center;
 
     &::before {
       content: "03.";
-      display: block;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-      color: $highlight;
-      font-weight: 400;
-      font-size: 24px;
-      margin-right: 10px;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      // width: 300px;
-      flex-grow: 1;
-      height: 1px;
-      margin-left: 20px;
-      background-color: rgba($color: $light-slate, $alpha: 0.3);
     }
   }
 
@@ -117,8 +95,11 @@ export default {
   }
 
   .info-message {
-    color: $light-slate;
-    font-size: 14px;
+    color: $slate;
+    font-size: 18px;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    line-height: 26px;
+    text-align: center;
   }
 }
 </style>

@@ -50,5 +50,9 @@
       ],
       "image": "Cover-test1.png"
     }
-  ]
+  ],
+  "emailMessage": {
+    "subject": "Mail dal mio sito web",
+    "body": ""
+  }
 }
