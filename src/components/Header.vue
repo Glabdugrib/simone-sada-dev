@@ -5,7 +5,7 @@
       <div class="logo">
         <a href="/">
           <!-- Placeholder logo -->
-          Logo
+          S<span>#</span>
           <!-- <img src="" alt=""> -->
         </a>
       </div>
@@ -87,6 +87,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/style.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 // [TODO] animazione navbar, trasparenza
 
@@ -115,7 +116,23 @@ export default {
       justify-content: center;
       width: 50px;
       aspect-ratio: 1;
-      border: 1px solid yellow;
+      border: 1px solid $lightest-slate;
+      position: relative;
+
+      font-size: 34px;
+      font-family: 'Bungee', cursive;
+      transition: all ease-in-out .3s;
+      line-height: 1;
+
+      span {
+        font-size: 26px;
+        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      }
+
+      &:hover {
+        border: 1px solid $highlight;
+        color: $highlight;
+      }
     }
 
     .nav-list {
