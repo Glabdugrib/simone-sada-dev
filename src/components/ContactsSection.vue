@@ -172,25 +172,6 @@ export default {
       font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
       line-height: 26px;
     }
-
-    .cta-btn {
-      color: $highlight;
-      background-color: transparent;
-      border: 1px solid $highlight;
-      border-radius: 4px;
-      padding: 12px 16px;
-      font-size: 14px;
-      font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-      line-height: 1;
-      transition: all ease-in-out .3s;
-      display: inline-block;
-
-      &:hover {
-        background-color: rgba($color: $highlight, $alpha: 0.1);
-        color: white;
-        transform: scale(1.02);
-      }
-    }
   }
 }
 

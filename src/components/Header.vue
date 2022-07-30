@@ -5,7 +5,7 @@
       <div class="logo">
         <a href="/">
           <!-- Placeholder logo -->
-          S<span>#</span>
+          S<span></span>
           <!-- <img src="" alt=""> -->
         </a>
       </div>
