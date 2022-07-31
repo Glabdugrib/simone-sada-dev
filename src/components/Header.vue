@@ -12,13 +12,10 @@
       <!-- Nav links -->
       <div class="nav-list">
         <ol>
-          <li>
-            <a href="/">{{ $t("nav.home") }}</a>
-          </li>
-          <li>
+          <li class="disabled">
             <a href="/#about">{{ $t("nav.about") }}</a>
           </li>
-          <li>
+          <li class="disabled">
             <a href="/#experience">{{ $t("nav.experience") }}</a>
           </li>
           <li>
@@ -44,10 +41,10 @@
             <li>
               <a href="/">{{ $t("nav.home") }}</a>
             </li>
-            <li>
+            <li class="disabled">
               <a href="/#about">{{ $t("nav.about") }}</a>
             </li>
-            <li>
+            <li class="disabled">
               <a href="/#experience">{{ $t("nav.experience") }}</a>
             </li>
             <li>
@@ -101,6 +98,7 @@ export default {
   background-color: $primary-bg;
   display: flex;
   align-items: center;
+  z-index: 99;
 
   .navbar {
     width: 100%;
@@ -157,6 +155,13 @@ export default {
             &:hover {
               color: $highlight;
             }
+          }
+
+          &.disabled {
+            cursor: default;
+            text-decoration: line-through;
+            pointer-events: none;
+            opacity: 0.5;
           }
         }
       }
