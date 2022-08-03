@@ -1,7 +1,7 @@
 <template>
   <section id="contacts">
     <!-- Versione in block per schermi piccoli -->
-    <h2 class="section-title">Contacts</h2>
+    <h2 class="section-title">{{ $t("contacts.sectionName") }}</h2>
     <ul class="social-list">
       <li class="social-btn">
         <a :href="contactLinks.Github" target="_blank">
@@ -18,10 +18,15 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>Instagram</title><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         </a>
       </li>
+      <li class="social-btn">
+        <a :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg>
+        </a>
+      </li>
     </ul>
     <div class="contact-me">
-      <p class="catch-phrase">Do you want to share your <em>idea</em> with me?</p>
-      <a class="cta-btn" :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">Let's talk!</a>
+      <p class="catch-phrase">{{ $t("contacts.catchPhrase") }}</p>
+      <a class="cta-btn" :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">{{ $t("contacts.ctaBtn") }}</a>
     </div>
     <!-- Versione fixed per schermi grandi -->
     <ul class="social-list vertical">
@@ -32,12 +37,12 @@
       </li>
       <li class="social-btn">
         <a :href="contactLinks.Linkedin" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>LinkedIn</title><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>LinkedIn</title><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
         </a>
       </li>
       <li class="social-btn">
         <a :href="contactLinks.Instagram" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>Instagram</title><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>Instagram</title><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         </a>
       </li>
     </ul>
@@ -53,7 +58,7 @@ import state from '../store'
 export default {
   computed: {
     emailMessage() {
-      return this.$t('emailMessage') // attinge dai file locale delle lingue
+      return this.$t('contacts.emailMessage') // attinge dai file locale delle lingue
     },
     contactLinks() {
       return state.contactLinks
@@ -83,7 +88,7 @@ export default {
   }
 
   .vertical {
-
+    
     &.social-list,
     &.email {
       display: flex;
@@ -100,7 +105,7 @@ export default {
         display: block;
         width: 1px;
         height: 90px;
-        margin: 0pc auto;
+        margin: 0px auto;
         background-color: $light-slate;
       }
     }
@@ -131,10 +136,6 @@ export default {
         writing-mode: vertical-rl;
       }
     }
-  }
-
-  .social-list {
-
     .social-btn {
       margin-bottom: 5px;
       transition: all ease-in-out 0.3s;
@@ -161,8 +162,34 @@ export default {
     }
   }
 
+  .social-list:not(.vertical) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+
+    .social-btn {
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        color: $highlight;
+        transform: scale(1.05);
+      }
+
+      a {
+        padding: 10px;
+        display: inline-block;
+        
+        svg {
+          min-width: calc(max(6vw, 44px));
+          max-width: calc(max(6vw, 44px));
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+
   .contact-me {
-    display: none;
+    // display: none;
     text-align: center;
 
     .catch-phrase {
@@ -196,12 +223,12 @@ export default {
 @media screen and (min-width: 769px) {
 
   #contacts {
-    padding: 0;
-    margin: 0;
+    // padding: 0;
+    // margin: 0;
 
-    .section-title,
+    // .section-title,
     .social-list:not(.vertical) {
-      display: none;
+      // display: none;
     }
   }
 }
@@ -219,41 +246,41 @@ export default {
       }
     }
 
-    .section-title {
-      display: flex;
-    }
+    // .section-title {
+    //   display: flex;
+    // }
 
-    .social-list:not(.vertical) {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 40px;
+    // .social-list:not(.vertical) {
+    //   display: flex;
+    //   justify-content: space-around;
+    //   margin-bottom: 40px;
 
-      .social-btn {
-        margin-bottom: 5px;
-        width: calc(40px + 8vw);
+    //   .social-btn {
+    //     margin-bottom: 5px;
+    //     width: calc(40px + 8vw);
 
-        &:hover {
-          transform: scale(1.08);
-        }
+    //     &:hover {
+    //       transform: scale(1.08);
+    //     }
 
-        &:last-of-type {
-        }
+    //     &:last-of-type {
+    //     }
 
-        a {
-          width: 100%;
+    //     a {
+    //       width: 100%;
           
-          svg {
-            min-width: 100%;
-            max-width: 100%;
-            aspect-ratio: 1;
-          }
-        }
-      }
-    }
+    //       svg {
+    //         min-width: 100%;
+    //         max-width: 100%;
+    //         aspect-ratio: 1;
+    //       }
+    //     }
+    //   }
+    // }
 
-    .contact-me {
-      display: block;
-    }
+    // .contact-me {
+    //   display: block;
+    // }
   }
 }
 </style>
