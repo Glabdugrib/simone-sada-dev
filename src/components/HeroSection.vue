@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         <h3 class="overline">{{ $t("hero.overline") }}</h3>
-        <h1 class="main-title">{{ $t("hero.main-title") }}</h1>
+        <h1 class="main-title">{{ $t("hero.mainTitle") }}</h1>
         <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
         <p class="description">{{ $t("hero.description") }}</p>
         <a class="cta-btn" :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">{{ $t("hero.cta") }}</a>
@@ -18,7 +18,7 @@ import state from '../store'
 export default {
   computed: {
     emailMessage() {
-      return this.$t('emailMessage') // attinge dai file locale delle lingue
+      return this.$t('contacts.emailMessage') // attinge dai file locale delle lingue
     },
     contactLinks() {
       return state.contactLinks

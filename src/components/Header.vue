@@ -4,9 +4,7 @@
       <!-- Logo -->
       <div class="logo">
         <a href="/">
-          <!-- Placeholder logo -->
-          S<span></span>
-          <!-- <img src="" alt=""> -->
+          S<!-- Placeholder logo -->
         </a>
       </div>
       <!-- Nav links -->
@@ -22,7 +20,7 @@
             <a href="/#projects">{{ $t("nav.projects") }}</a>
           </li>
           <li>
-            <a href="/#contact">{{ $t("nav.contact") }}</a>
+            <a href="/#contacts">{{ $t("nav.contact") }}</a>
           </li>
           <li>
             <LanguageSwitcher/>
@@ -122,9 +120,12 @@ export default {
       transition: all ease-in-out .3s;
       line-height: 1;
 
-      span {
-        font-size: 26px;
-        font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       &:hover {
