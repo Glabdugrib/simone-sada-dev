@@ -95,7 +95,7 @@ export default {
   }
 
   .info-message {
-    color: $slate;
+    color: $text;
     font-size: 18px;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     line-height: 26px;

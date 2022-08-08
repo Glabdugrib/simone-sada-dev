@@ -22,6 +22,9 @@
           <li>
             <a href="/#contacts">{{ $t("nav.contact") }}</a>
           </li>
+          <li :class="{'dark-mode-toggle': true, 'active': darkModeIsActive}">
+            <button @click="toggleDarkMode()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><title>Dark mode</title><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 64V448C362 448 448 362 448 256C448 149.1 362 64 256 64z"/></svg></button>
+          </li>
           <li>
             <LanguageSwitcher/>
           </li>
@@ -69,12 +72,17 @@ export default {
   data() {
     return {
       dropdownIsOpen: false,
+      darkModeIsActive: true
     };
   },
   methods: {
     toggleDropdown: function () {
-      this.dropdownIsOpen = !this.dropdownIsOpen;
+      this.dropdownIsOpen = !this.dropdownIsOpen
     },
+    toggleDarkMode: function () {
+      this.darkModeIsActive = !this.darkModeIsActive
+
+    }
   },
 };
 </script>
@@ -100,7 +108,7 @@ export default {
 
   .navbar {
     width: 100%;
-    color: $lightest-slate;
+    color: $lightest-text;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     display: flex;
     align-items: center;
@@ -112,10 +120,10 @@ export default {
       justify-content: center;
       width: 50px;
       aspect-ratio: 1;
-      border: 1px solid $lightest-slate;
+      // border: 1px solid $lightest-text;
       position: relative;
 
-      font-size: 34px;
+      font-size: 40px;
       font-family: 'Bungee', cursive;
       transition: all ease-in-out .3s;
       line-height: 1;
@@ -129,13 +137,14 @@ export default {
       }
 
       &:hover {
-        border: 1px solid $highlight;
+        // border: 1px solid $highlight;
         color: $highlight;
       }
     }
 
     .nav-list {
       display: flex;
+      align-items: center;
 
       ol {
         display: contents;
@@ -163,6 +172,47 @@ export default {
             text-decoration: line-through;
             pointer-events: none;
             opacity: 0.5;
+          }
+
+          &.dark-mode-toggle {
+            margin-right: 8px;
+            transition: all ease-in-out .3s;
+
+            &.active {
+
+              button {
+                color: $highlight;
+              }
+            }
+
+            &:not(.active) {
+              transform: rotate(180deg);
+            }
+
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: none;
+              background: transparent;
+              padding: 5px;
+              cursor: pointer;
+              transition: all ease-in-out .3s;
+              color: $primary-bg;
+
+              svg {
+                min-width: 18px;
+                aspect-ratio: 1;
+              }
+
+              &:hover {
+                transform: scale(1.1);
+              }
+
+              &::before {
+                display: none;
+              }
+            }
           }
         }
       }

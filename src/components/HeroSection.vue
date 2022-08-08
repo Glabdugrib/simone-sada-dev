@@ -41,11 +41,12 @@ export default {
 
 #hero {
   text-align: left;
+  // height: max(100vh,530px);
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0px 0px 10px;
     font-weight: 600;
-    color: $lightest-slate;
+    color: $lightest-text;
     line-height: 1.1;
   }
 
@@ -68,7 +69,7 @@ export default {
     margin: 0px;
     font-size: clamp(20px, 4vw, 35px);
     // margin-top: 10px;
-    color: $slate;
+    color: $text;
     line-height: 0.9;
   }
 
@@ -78,7 +79,7 @@ export default {
     font-size: 18px;
     line-height: 24px;
     font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    color: rgb(136, 146, 176);
+    color: $text;
     margin-bottom: 50px;
   }
 

@@ -35,7 +35,7 @@ em {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $text;
   background-color: $primary-bg;
   margin-top: 100px;
   user-select: none;
@@ -72,13 +72,15 @@ section {
   padding: 100px 0px;
   max-width: 1000px;
   width: 100%;
+  //debug
+  border-bottom: 1px solid white;
 
   .section-title {
     margin: 10px 0 40px 0;
     font-size: 30px;
     font-weight: 600;
     line-height: 36px;
-    color: $lightest-slate;
+    color: $lightest-text;
     display: flex;
     align-items: center;
     text-align: left;
@@ -98,7 +100,8 @@ section {
       flex-grow: 1;
       height: 1px;
       margin-left: 20px;
-      background-color: rgba($color: $light-slate, $alpha: 0.3);
+      background-color: rgba($color: $light-text, $alpha: 0.3);
+      background-color: $highlight;
     }
   }
 }

@@ -165,7 +165,7 @@ export default {
       margin-bottom: 25px;
       cursor: pointer;
       font-size: clamp(24px, 5vw, 28px);
-      color: $lightest-slate;
+      color: $lightest-text;
 
       &:hover {
         color: $highlight;
@@ -175,7 +175,7 @@ export default {
     .project-description {
       padding: 25px;
       background-color: $secundary-bg;
-      color: $light-slate;
+      color: $light-text;
       box-shadow: 0 10px 30px -15px $shadow;
       border-radius: 3px;
       font-size: 17px;
@@ -188,7 +188,7 @@ export default {
       gap: 20px;
       margin: 25px 0 10px 0;
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-      color: $light-slate;
+      color: $light-text;
 
       li {
         margin-bottom: 5px;
@@ -200,7 +200,7 @@ export default {
       display: flex;
       justify-content: flex-end;
       margin-top: 10px;
-      color: $light-slate;
+      color: $light-text;
 
       li {
         transition: all ease-in-out 0.3s;

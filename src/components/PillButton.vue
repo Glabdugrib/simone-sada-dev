@@ -38,14 +38,13 @@ export default {
 
 .pill {
   padding: 3px 11px;
-  // background-color: rgb(6,182,212);
-  color: $light-slate;
+  color: $light-text;
   border-radius: 9999px;
   font-weight: 600;
   font-size: 13px;
   line-height: 1.25rem;
   box-shadow: 0 1px 2px 0 rgba($color: #000, $alpha: 0.05);
-  border: 1px solid $light-slate;
+  border: 1px solid $light-text;
   cursor: pointer;
   transition: transform ease-in-out .2s;
   font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;

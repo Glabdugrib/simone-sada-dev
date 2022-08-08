@@ -27,7 +27,7 @@ export default {};
   select {
     background-color: transparent;
     border: none;
-    color: $lightest-slate;
+    color: $lightest-text;
     text-transform: uppercase;
     //appearance: none; // per nascondere l'icona della freccina
   }
