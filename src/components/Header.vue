@@ -43,16 +43,16 @@
               <a href="/">{{ $t("nav.home") }}</a>
             </li>
             <li class="disabled">
-              <a href="/#about">{{ $t("nav.about") }}</a>
+              <a href="#about">{{ $t("nav.about") }}</a>
             </li>
             <li class="disabled">
-              <a href="/#experience">{{ $t("nav.experience") }}</a>
+              <a href="#experience">{{ $t("nav.experience") }}</a>
             </li>
             <li>
-              <a href="/#projects">{{ $t("nav.projects") }}</a>
+              <a href="#projects">{{ $t("nav.projects") }}</a>
             </li>
             <li>
-              <a href="/#contact">{{ $t("nav.contact") }}</a>
+              <a href="#contact">{{ $t("nav.contact") }}</a>
             </li>
           </ol>
         </aside>
@@ -105,6 +105,8 @@ export default {
   display: flex;
   align-items: center;
   z-index: 99;
+  // border-bottom: 1px solid white;
+  box-shadow: 0px 2px 5px rgba($color: black, $alpha: 0.6);
 
   .navbar {
     width: 100%;
