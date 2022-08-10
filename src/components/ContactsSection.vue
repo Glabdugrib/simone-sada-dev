@@ -183,8 +183,8 @@ export default {
         display: inline-block;
         
         svg {
-          min-width: calc(max(6vw, 44px));
-          max-width: calc(max(6vw, 44px));
+          min-width: calc(max(5vw, 38px));
+          max-width: calc(max(5vw, 38px));
           aspect-ratio: 1;
         }
       }
