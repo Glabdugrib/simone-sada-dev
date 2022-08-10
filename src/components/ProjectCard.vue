@@ -118,7 +118,7 @@ export default {
     width: 60%;
     aspect-ratio: calc(1920 / 1080);
     margin: 0;
-    border-radius: 3px;
+    border-radius: 8px;
 
     &::after {
       content: "";
@@ -129,7 +129,7 @@ export default {
       bottom: 0;
       display: block;
       transition: all ease-in-out 0.5s;
-      background-color: rgba($color: black, $alpha: 0.5);
+      background-color: rgba($color: black, $alpha: 0.3);
       cursor: pointer;
     }
 
@@ -174,10 +174,10 @@ export default {
 
     .project-description {
       padding: 25px;
-      background-color: $secundary-bg;
+      background-color: rgba($color: $secundary-bg, $alpha: 0.6);
       color: $light-text;
       box-shadow: 0 10px 30px -15px $shadow;
-      border-radius: 3px;
+      border-radius: 8px;
       font-size: 17px;
       line-height: 24px;
     }
