@@ -1,6 +1,6 @@
 <template>
   <section id="contacts">
-    <!-- Versione in block per schermi piccoli -->
+    <!-- Contacts section -->
     <h2 class="section-title">{{ $t("contacts.sectionName") }}</h2>
     <ul class="social-list">
       <li class="social-btn">
@@ -28,7 +28,9 @@
       <p class="catch-phrase" v-html="catchPhrase"></p>
       <a class="cta-btn" :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">{{ $t("contacts.ctaBtn") }}</a>
     </div>
-    <!-- Versione fixed per schermi grandi -->
+
+    <!-- Vertical social links (only desktop) -->
+      <!-- Left -->
     <ul class="social-list vertical">
       <li class="social-btn">
         <a :href="contactLinks.Github" target="_blank">
@@ -46,6 +48,7 @@
         </a>
       </li>
     </ul>
+      <!-- Right -->
     <div class="email vertical">
       <a :href="`mailto:${email}?subject=${URLEncode(emailMessage.subject)}`">{{ email }}</a>
     </div>
@@ -58,7 +61,7 @@ import state from '../store'
 export default {
   computed: {
     emailMessage() {
-      return this.$t('contacts.emailMessage') // attinge dai file locale delle lingue
+      return this.$t('contacts.emailMessage')
     },
     catchPhrase() {
       return this.$t("contacts.catchPhrase")
@@ -71,7 +74,7 @@ export default {
     }
   },
   methods: {
-    URLEncode(string) { // converte con l'encoding corretto senza spazi
+    URLEncode(string) { // convert into the correct encoding (blanck space => %20)
       return string.replace(' ', '%20')
     }
   }
@@ -90,17 +93,45 @@ export default {
     }
   }
 
+  // Social list section
+  .social-list:not(.vertical) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+
+    .social-btn {
+      transition: all ease-in-out 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        color: $highlight;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px;
+        
+        svg {
+          min-width: calc(max(5vw, 38px));
+          max-width: calc(max(5vw, 38px));
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+
+  // Vertical social links (only desktop)
   .vertical {
     
     &.social-list,
     &.email {
+      position: fixed;
+      bottom: 0px;
+      z-index: 10;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 40px;
-      position: fixed;
-      bottom: 0px;
-      z-index: 10;
       color: $light-text;
 
       &::after {
@@ -121,12 +152,11 @@ export default {
     &.email {
       left: auto;
       right: 40px;
-      
       transition: all ease-in-out .3s;
 
       &:hover {
-        color: $highlight;
         transform: scale(1.02);
+        color: $highlight;  
       }
 
       a {
@@ -140,12 +170,12 @@ export default {
       }
     }
     .social-btn {
-      margin-bottom: 5px;
       transition: all ease-in-out 0.3s;
+      margin-bottom: 5px;
 
       &:hover {
+        transform: scale(1.15);
         color: $highlight;
-        transform: scale(1.1);
       }
 
       &:last-of-type {
@@ -153,8 +183,8 @@ export default {
       }
 
       a {
-        padding: 10px;
         display: inline-block;
+        padding: 10px;
         
         svg {
           min-width: 22px;
@@ -165,34 +195,7 @@ export default {
     }
   }
 
-  .social-list:not(.vertical) {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 50px;
-
-    .social-btn {
-      transition: all ease-in-out 0.3s;
-
-      &:hover {
-        color: $highlight;
-        transform: scale(1.05);
-      }
-
-      a {
-        padding: 10px;
-        display: inline-block;
-        
-        svg {
-          min-width: calc(max(5vw, 38px));
-          max-width: calc(max(5vw, 38px));
-          aspect-ratio: 1;
-        }
-      }
-    }
-  }
-
   .contact-me {
-    // display: none;
     text-align: center;
 
     .catch-phrase {
@@ -205,6 +208,7 @@ export default {
   }
 }
 
+// Medium screens
 @media screen and (max-width: 1080px) {
 
   #contacts {
@@ -222,21 +226,7 @@ export default {
   }
 }
 
-// Solo schermi grandi
-@media screen and (min-width: 769px) {
-
-  #contacts {
-    // padding: 0;
-    // margin: 0;
-
-    // .section-title,
-    .social-list:not(.vertical) {
-      // display: none;
-    }
-  }
-}
-
-// Schermo più piccolo
+// Small screens
 @media screen and (max-width: 768px) {
 
   #contacts {
@@ -248,42 +238,6 @@ export default {
         display: none;
       }
     }
-
-    // .section-title {
-    //   display: flex;
-    // }
-
-    // .social-list:not(.vertical) {
-    //   display: flex;
-    //   justify-content: space-around;
-    //   margin-bottom: 40px;
-
-    //   .social-btn {
-    //     margin-bottom: 5px;
-    //     width: calc(40px + 8vw);
-
-    //     &:hover {
-    //       transform: scale(1.08);
-    //     }
-
-    //     &:last-of-type {
-    //     }
-
-    //     a {
-    //       width: 100%;
-          
-    //       svg {
-    //         min-width: 100%;
-    //         max-width: 100%;
-    //         aspect-ratio: 1;
-    //       }
-    //     }
-    //   }
-    // }
-
-    // .contact-me {
-    //   display: block;
-    // }
   }
 }
 </style>
