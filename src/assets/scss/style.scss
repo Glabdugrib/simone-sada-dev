@@ -41,7 +41,6 @@ em {
   text-align: center;
   color: $text;
   background-color: $primary-bg;
-  // overflow-y: auto;
 }
 
 .container {
@@ -75,8 +74,6 @@ section {
   padding: 120px 0px;
   max-width: 1000px;
   width: 100%;
-  //debug
-  // border-bottom: 1px solid white;
 
   .section-title {
     margin: 10px 0 40px 0;
@@ -124,9 +121,9 @@ section {
   display: inline-block;
 
   &:hover {
-    background-color: rgba($color: $highlight, $alpha: 0.1);
-    color: white;
-    transform: scale(1.02);
+    background-color: rgba($color: $highlight, $alpha: 0.05);
+    // color: white;
+    transform: scale(1.05);
   }
 }
 
