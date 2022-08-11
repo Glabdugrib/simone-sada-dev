@@ -90,7 +90,8 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/style.scss";
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 // [TODO] animazione navbar, trasparenza
 
@@ -126,9 +127,11 @@ export default {
       position: relative;
 
       font-size: 40px;
-      font-family: 'Bungee', cursive;
+      // font-family: 'Bungee', cursive;
+      font-family: "Audiowide", cursive;
       transition: all ease-in-out .3s;
       line-height: 1;
+      text-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.4);
 
       a {
         width: 100%;
