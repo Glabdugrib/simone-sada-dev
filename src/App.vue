@@ -12,8 +12,8 @@
     <!-- Router link sample -->
     <!-- <router-link :to="`/${$i18n.locale}`">Home</router-link>
       <router-link :to="`/${$i18n.locale}/foo`">Foo</router-link> -->
+    <Hero/>
     <div class="container">
-      <Hero/>
       <Projects/>
       <Contacts/>
     </div>
