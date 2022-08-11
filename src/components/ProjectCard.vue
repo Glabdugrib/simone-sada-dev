@@ -101,7 +101,7 @@ export default {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif; // [TODO] check fonts
 
   &:last-of-type {

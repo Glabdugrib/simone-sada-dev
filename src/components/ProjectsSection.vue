@@ -76,7 +76,7 @@ export default {
   counter-increment: section;
 
   .section-title {
-    margin: 10px 0 20px 0;
+    // margin: 10px 0 20px 0;
 
     &::before {
       content: "03.";
@@ -87,7 +87,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 
     ul {
       display: contents;
