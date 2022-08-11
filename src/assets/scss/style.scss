@@ -41,9 +41,7 @@ em {
   text-align: center;
   color: $text;
   background-color: $primary-bg;
-  // margin-top: 100px;
-  user-select: none;
-  min-height: 100vh;
+  // overflow-y: auto;
 }
 
 .container {
