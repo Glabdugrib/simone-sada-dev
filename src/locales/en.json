@@ -80,7 +80,7 @@
   ],
   "contacts": {
     "sectionName": "Contacts",
-    "catchPhrase": "Do you want to share your <em class=\"highlight\">idea</em> with me?",
+    "catchPhrase": "Do you want to share your <span style=\"color: #f4972c; font-weight: 600;\">idea</span> with me?",
     "ctaBtn": "Let's talk!",
     "emailMessage": {
       "subject": "Mail from my website",

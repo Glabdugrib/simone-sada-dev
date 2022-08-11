@@ -59,7 +59,7 @@
   ],
   "contacts": {
     "sectionName": "Contatti",
-    "catchPhrase": "Hai un'idea interessante da propormi?",
+    "catchPhrase": "Hai un'<span style=\"color: #f4972c; font-weight: 600;\">idea</span> interessante da propormi?",
     "ctaBtn": "Parliamone!",
     "emailMessage": {
       "subject": "Mail dal mio sito web",
