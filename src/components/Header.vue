@@ -100,7 +100,7 @@ export default {
   left: 0;
   right: 0;
   padding: 0px 50px;
-  height: 100px;
+  height: 80px;
   background-color: $primary-bg;
   display: flex;
   align-items: center;
