@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -37,7 +41,7 @@ em {
   text-align: center;
   color: $text;
   background-color: $primary-bg;
-  margin-top: 100px;
+  // margin-top: 100px;
   user-select: none;
   min-height: 100vh;
 }
@@ -47,7 +51,6 @@ em {
   width: 100%;
   margin: 0 auto;
   padding: 0 150px;
-  // border: 1px solid red;
 }
 
 .row {
@@ -65,33 +68,37 @@ em {
   }
 }
 
-
+.highlight {
+  color: $highlight;
+}
 
 section {
   margin: 0px auto;
-  padding: 100px 0px;
+  padding: 120px 0px;
   max-width: 1000px;
   width: 100%;
   //debug
-  border-bottom: 1px solid white;
+  // border-bottom: 1px solid white;
 
   .section-title {
     margin: 10px 0 40px 0;
-    font-size: 30px;
+    font-size: 44px;
     font-weight: 600;
     line-height: 36px;
     color: $lightest-text;
     display: flex;
     align-items: center;
     text-align: left;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    letter-spacing: 1.3px;
 
     &::before {
       display: block;
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
       color: $highlight;
       font-weight: 400;
-      font-size: 24px;
-      margin-right: 10px;
+      font-size: 32px;
+      margin-right: 15px;
     }
 
     &::after {
@@ -99,7 +106,7 @@ section {
       display: block;
       flex-grow: 1;
       height: 1px;
-      margin-left: 20px;
+      margin-left: 25px;
       background-color: rgba($color: $light-text, $alpha: 0.3);
       background-color: $highlight;
     }
@@ -125,6 +132,8 @@ section {
   }
 }
 
+
+// MEDIA QUERIES
 @media screen and (max-width: 1080px) {
 
   .container {
