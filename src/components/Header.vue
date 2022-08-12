@@ -131,7 +131,7 @@ export default {
       font-family: "Audiowide", cursive;
       transition: all ease-in-out .3s;
       line-height: 1;
-      text-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.4);
+      @include text-shadow;
 
       a {
         width: 100%;

@@ -2,11 +2,11 @@
   <section id="hero">
     <!-- Particles -->
     <vue-particles
-      color="#dedede"
-      :particleOpacity="0.3"
+      color="#5afed7"
+      :particleOpacity="0.35"
       :particlesNumber="70"
       shapeType="circle"
-      :particleSize="4"
+      :particleSize="3"
       linesColor="#dedede"
       :linesWidth="1"
       :lineLinked="true"
@@ -73,7 +73,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    text-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.4);
+    @include text-shadow;
 
     h1,
     h2 {

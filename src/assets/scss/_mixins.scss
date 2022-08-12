@@ -9,5 +9,9 @@
   transition: all .5s ease-in-out;
 }
 
+@mixin text-shadow {
+  text-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.5);
+}
+
 // to add mixin:
 // @include test 
