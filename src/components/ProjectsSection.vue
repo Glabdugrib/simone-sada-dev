@@ -1,6 +1,6 @@
 <template>
   <section id="projects">
-    <h2 class="section-title">My projects</h2>
+    <h2 class="section-title">{{ $t("projects.sectionName") }}</h2>
     <!-- Filtro -->
     <div class="filter">
       <ul>
@@ -26,12 +26,12 @@ export default {
   data() {
     return {
       //active: false,
-      technologies: ['Vue', 'Scss', 'Laravel', 'React', 'Kiba', 'Cane', 'Gatto', 'Squalo'] // [TODO] da rendere dinamica
+      technologies: ['Bootstrap', 'Javascript', 'Laravel', 'MySQL', '.NET', 'Vue.js'] // [TODO] da rendere dinamica
     }
   },
   computed: {
     projects() {
-      return this.$t('projects') // attinge dai file locale delle lingue
+      return this.$t('projects.projectsList') // attinge dai file locale delle lingue
     },
     filteredProjects() {
       if(this.technologyFilter.length == 0) {
