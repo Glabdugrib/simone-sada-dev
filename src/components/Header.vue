@@ -3,9 +3,7 @@
     <nav class="navbar">
       <!-- Logo -->
       <div class="logo">
-        <a href="/">
-          S<!-- Placeholder logo -->
-        </a>
+        <a href="/#">S</a>
       </div>
       <!-- Nav links -->
       <div class="nav-list">
@@ -22,10 +20,10 @@
           <li>
             <a href="/#contacts">{{ $t("nav.contact") }}</a>
           </li>
-          <li :class="{'dark-mode-toggle': true, 'active': darkModeIsActive}">
+          <!-- <li :class="{'dark-mode-toggle': true, 'active': darkModeIsActive}">
             <button @click="toggleDarkMode()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><title>Dark mode</title><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 64V448C362 448 448 362 448 256C448 149.1 362 64 256 64z"/></svg></button>
-          </li>
-          <li>
+          </li> -->
+          <li class="language-switcher">
             <LanguageSwitcher/>
           </li>
         </ol>
@@ -157,6 +155,10 @@ export default {
         li {
           margin: 0 3px;
           font-size: 15px;
+
+          &.language-switcher{
+            margin: 0 3px 0 6px;
+          }
 
           a {
             padding: 10px;

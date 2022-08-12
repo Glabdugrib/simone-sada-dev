@@ -1,15 +1,5 @@
 <template>
-  <div
-    class="project"
-    :style="
-      false
-        ? {
-            backgroundImage:
-              'url(' + require(`@/assets/images/${project.image}`) + ')',
-          }
-        : ''
-    "
-  >
+  <div class="project" :style="false ? {backgroundImage: 'url(' + require(`@/assets/images/${project.image}`) + ')'} : '' ">
     <!-- Image -->
     <figure class="project-image">
       <img :src="require(`../assets/images/${project.image}`)" alt="" />
@@ -177,7 +167,7 @@ export default {
       display: block;
       transition: all ease-in-out 0.5s;
       background-color: rgba($color: black, $alpha: 0.3);
-      cursor: pointer;
+      // cursor: pointer;
     }
 
     &:hover {
@@ -210,7 +200,7 @@ export default {
     .project-title {
       transition: color ease-in-out 0.3s;
       margin-bottom: 25px;
-      cursor: pointer;
+      // cursor: pointer;
       font-size: clamp(24px, 5vw, 28px);
       // color: $lightest-text;
       color: $highlight;

@@ -18,7 +18,7 @@
       {
         "title": "Portfolio",
         "overline": "",
-        "description": "Here is my portfolio, fully designed and programmed <span style=\"color: #5afed7;\">by me</span>!\nMain features: <span style=\"color: #5afed7;\">fully responsive</span>, <span style=\"color: #5afed7;\">multilingual</span>.\nNew projects are coming soon, <span style=\"color: #5afed7;\">stay tuned!</span>",
+        "description": "Here is my portfolio, fully designed and built <span style=\"color: #5afed7;\">by me</span>!\nMain features: <span style=\"color: #5afed7;\">fully responsive</span>, <span style=\"color: #5afed7;\">multilingual</span>.\nNew projects are coming soon, <span style=\"color: #5afed7;\">stay tuned!</span>",
         "technologies": [
           "Vue.js"
         ],
