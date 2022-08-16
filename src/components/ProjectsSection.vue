@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       //active: false,
-      technologies: ['Bootstrap', 'Javascript', 'Laravel', 'MySQL', '.NET', 'Vue.js'] // [TODO] da rendere dinamica
+      technologies: ['Bootstrap', 'Javascript', 'Laravel', 'MySQL', 'Vue.js', '.NET'] // [TODO] da rendere dinamica
     }
   },
   computed: {
