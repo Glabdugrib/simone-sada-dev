@@ -38,12 +38,12 @@
       {
         "title": "Wowlidays",
         "overline": "",
-        "description": "Replica del famoso sito <span style=\"color: #5afed7;\">AirBnb</span>, creato con il <span style=\"color: #5afed7;\">pattern MVC</span>.\nCome <span style=\"color: #5afed7;\">cliente</span> puoi vedere tutte le case disponibili e contattare gli host.\nCome <span style=\"color: #5afed7;\">host</span> puoi gestire le tue case (con le operazioni <span style=\"color: #5afed7;\">CRUD</span>) and sponsorizzarle per dargli maggiore visibilità.",
+        "description": "Replica del famoso sito <span style=\"color: #5afed7;\">AirBnb</span>, creato con <span style=\"color: #5afed7;\">MVC pattern</span> and <span style=\"color: #5afed7;\">RESTful APIs</span>.\nPrincipali features: <span style=\"color: #5afed7;\">authentication</span> (3 types of user), <span style=\"color: #5afed7;\">client side</span> and <span style=\"color: #5afed7;\">server side validation</span>, pagamenti con <span style=\"color: #5afed7;\">Braintree</span>, coordinate e distanze con <span style=\"color: #5afed7;\">TomTom Api</span>, gestisci le tue case con le <span style=\"color: #5afed7;\">operazioni CRUD operations</span> quando loggato come host.",
         "technologies": [
-          "Vue.js",
           "Bootstrap",
           "Laravel",
-          "MySQL"
+          "MySQL",
+          "Vue.js"
         ],
         "lastUpdate": "08/10/2022",
         "links": [
