@@ -220,7 +220,7 @@ export default {
       
       background: linear-gradient(90deg, rgba($secundary-bg, 0.7) 0%, rgba($secundary-bg, 0.5) 30%, rgba($secundary-bg, 0.3) 100%);
       color: $text;
-      box-shadow: 0 10px 30px -15px $shadow;
+      // box-shadow: 0 10px 30px -15px rgba($color: black, $alpha: 0.5);
       border-radius: 5px;
       font-size: 17px;
       line-height: 24px;
@@ -369,6 +369,10 @@ export default {
       z-index: 3;
       width: 100%;
       text-align: left;
+
+      .project-title {
+        text-align: left !important;
+      }
 
       .project-description {
         box-shadow: none;
