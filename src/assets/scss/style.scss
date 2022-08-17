@@ -73,7 +73,8 @@ section {
 
   .section-title {
     margin: 10px 0 40px 0;
-    font-size: 44px;
+    font-size: calc(34px + 0.5vw);
+    // font-size: 44px;
     font-weight: 600;
     line-height: 36px;
     color: $lightest-text;
@@ -89,7 +90,8 @@ section {
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
       color: $highlight;
       font-weight: 400;
-      font-size: 32px;
+      // font-size: 32px;
+      font-size: calc(22px + 0.5vw);
       margin-right: 15px;
       @include text-shadow;
     }
@@ -157,6 +159,6 @@ section {
   }
 
   section {
-    padding: 25px 0px;
+    padding: 40px 0px;
   }
 }

@@ -31,26 +31,21 @@
       <!-- Dropdown -->
       <div class="dropdown">
         <button class="dropdown-btn" @click="toggleDropdown()">
-          <div
-            :class="[dropdownIsOpen ? 'open' : '', 'dropdown-btn__hamburger']"
-          ></div>
+          <div :class="[dropdownIsOpen ? 'open' : '', 'dropdown-btn__hamburger']"></div>
         </button>
         <aside :class="[dropdownIsOpen ? 'open' : '', 'sidebar']">
           <ol>
-            <li>
-              <a href="/">{{ $t("nav.home") }}</a>
+            <li class="disabled">
+              <a href="/#about">{{ $t("nav.about") }}</a>
             </li>
             <li class="disabled">
-              <a href="#about">{{ $t("nav.about") }}</a>
-            </li>
-            <li class="disabled">
-              <a href="#experience">{{ $t("nav.experience") }}</a>
+              <a href="/#experience">{{ $t("nav.experience") }}</a>
             </li>
             <li>
-              <a href="#projects">{{ $t("nav.projects") }}</a>
+              <a href="/#projects">{{ $t("nav.projects") }}</a>
             </li>
             <li>
-              <a href="#contact">{{ $t("nav.contact") }}</a>
+              <a href="/#contacts">{{ $t("nav.contact") }}</a>
             </li>
           </ol>
         </aside>
@@ -70,17 +65,16 @@ export default {
   data() {
     return {
       dropdownIsOpen: false,
-      darkModeIsActive: true
+      // darkModeIsActive: true
     };
   },
   methods: {
     toggleDropdown: function () {
       this.dropdownIsOpen = !this.dropdownIsOpen
     },
-    toggleDarkMode: function () {
-      this.darkModeIsActive = !this.darkModeIsActive
-
-    }
+    // toggleDarkMode: function () {
+    //   this.darkModeIsActive = !this.darkModeIsActive
+    // }
   },
 };
 </script>
@@ -88,7 +82,6 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/style.scss";
-// @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 // [TODO] animazione navbar, trasparenza
@@ -145,6 +138,13 @@ export default {
       }
     }
 
+    .disabled {
+      cursor: default;
+      // text-decoration: line-through;
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
     .nav-list {
       display: flex;
       align-items: center;
@@ -174,12 +174,12 @@ export default {
             }
           }
 
-          &.disabled {
-            cursor: default;
-            text-decoration: line-through;
-            pointer-events: none;
-            opacity: 0.5;
-          }
+          // &.disabled {
+          //   cursor: default;
+          //   // text-decoration: line-through;
+          //   pointer-events: none;
+          //   opacity: 0.3;
+          // }
 
           &.dark-mode-toggle {
             margin-right: 8px;
@@ -281,7 +281,7 @@ export default {
         right: 0;
         width: min(75vw, 400px);
         min-height: 100vh;
-        background-color: $secundary-bg;
+        background-color: rgba($color: $secundary-bg, $alpha: 0.97);
         z-index: -1;
         align-items: center;
 

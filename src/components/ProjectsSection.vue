@@ -102,4 +102,14 @@ export default {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  
+  #projects {
+
+    .filter {
+      margin-bottom: 40px;
+    }
+  }
+}
 </style>
