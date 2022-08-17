@@ -4,6 +4,8 @@
 @import './variables';
 @import './mixins';
 
+
+/* RESET RULES */
 * {
   padding: 0;
   margin: 0;
@@ -25,18 +27,15 @@ a {
   text-decoration: none;
 }
 
-em {
-  color: $highlight;
-  font-style: normal;
-}
 
+/* --- */
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  @include font_default;
+  background-color: $primary-bg;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $text;
-  background-color: $primary-bg;
 }
 
 .container {
@@ -72,28 +71,28 @@ section {
   width: 100%;
 
   .section-title {
+    @include font_titles;
+    @include text-shadow;
+    display: flex;
+    align-items: center;
     margin: 10px 0 40px 0;
     font-size: calc(34px + 0.5vw);
     // font-size: 44px;
     font-weight: 600;
     line-height: 36px;
     color: $lightest-text;
-    display: flex;
-    align-items: center;
     text-align: left;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     letter-spacing: 1.3px;
-    @include text-shadow;
 
     &::before {
+      @include font_titles;
+      @include text-shadow;
       display: block;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      margin-right: 15px;
       color: $highlight;
       font-weight: 400;
       // font-size: 32px;
       font-size: calc(22px + 0.5vw);
-      margin-right: 15px;
-      @include text-shadow;
     }
 
     &::after {
@@ -109,27 +108,26 @@ section {
 }
 
 .cta-btn {
-  color: $highlight;
-  background-color: transparent;
+  @include font_titles;
+  @include text-shadow;
+  display: inline-block;
+  transition: all ease-in-out .3s;
+  padding: 12px 16px;
   border: 1px solid $highlight;
   border-radius: 4px;
-  padding: 12px 16px;
+  background-color: transparent;
+  color: $highlight;
   font-size: 14px;
-  font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   line-height: 1;
-  transition: all ease-in-out .3s;
-  display: inline-block;
-  @include text-shadow;
 
   &:hover {
-    background-color: rgba($color: $highlight, $alpha: 0.05);
-    // color: white;
     transform: scale(1.05);
+    background-color: rgba($color: $highlight, $alpha: 0.05);
   }
 }
 
 
-// MEDIA QUERIES
+/* MEDIA QUERIES */
 @media screen and (max-width: 1080px) {
 
   .container {
