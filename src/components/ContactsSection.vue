@@ -160,9 +160,9 @@ export default {
       }
 
       a {
+        @include font_titles;
         margin: 20px auto;
         padding: 10px;
-        font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
         font-size: 15px;
         line-height: 18px;
         letter-spacing: 0.1em;
@@ -199,10 +199,10 @@ export default {
     text-align: center;
 
     .catch-phrase {
+      @include font_default;
       margin-bottom: 30px;
       color: $text;
       font-size: 20px;
-      font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
       line-height: 26px;
     }
   }
