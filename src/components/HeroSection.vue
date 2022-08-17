@@ -136,4 +136,12 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  
+  #particles-js {
+    height: 100%;
+    width: 100%;
+  }
+}
 </style>
