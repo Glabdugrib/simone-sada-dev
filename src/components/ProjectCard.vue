@@ -234,6 +234,9 @@ export default {
       margin: 25px 0 10px 0;
       font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
       color: $light-text;
+      flex-wrap: wrap;
+      line-height: .5;
+      padding: 8px 0;
 
       li {
         margin-bottom: 5px;
