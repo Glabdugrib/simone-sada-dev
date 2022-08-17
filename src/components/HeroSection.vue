@@ -25,7 +25,7 @@
       <h2 class="subtitle">{{ $t("hero.subtitle") }}</h2>
     </div>
     <!-- Arrow button -->
-    <a href="#projects" class="scroll-down-arrow">
+    <a href="/simone-sada-dev/#projects" class="scroll-down-arrow">
       <svg class="arrow first-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
         <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/>
       </svg>
@@ -79,7 +79,7 @@
       margin: 0px;
       font-size: clamp(20px, 4vw, 35px);
       color: $text;
-      line-height: 0.9;
+      line-height: 1.5;
     }
   }
 
