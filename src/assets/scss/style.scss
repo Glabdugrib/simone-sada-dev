@@ -1,0 +1,162 @@
+@import './variables';
+@import './mixins';
+
+@import './variables';
+@import './mixins';
+
+
+/* RESET RULES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* --- */
+#app {
+  @include font_default;
+  background-color: $primary-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $text;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 150px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-6 {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  
+  .col-12 {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.highlight {
+  color: $highlight;
+}
+
+section {
+  margin: 0px auto;
+  padding: 120px 0px;
+  max-width: 1000px;
+  width: 100%;
+
+  .section-title {
+    @include font_titles;
+    @include text-shadow;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 40px 0;
+    font-size: calc(34px + 0.5vw);
+    // font-size: 44px;
+    font-weight: 600;
+    line-height: 36px;
+    color: $lightest-text;
+    text-align: left;
+    letter-spacing: 1.3px;
+
+    &::before {
+      @include font_titles;
+      @include text-shadow;
+      display: block;
+      margin-right: 15px;
+      color: $highlight;
+      font-weight: 400;
+      // font-size: 32px;
+      font-size: calc(22px + 0.5vw);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      flex-grow: 1;
+      height: 1px;
+      margin-left: 25px;
+      background-color: rgba($color: $light-text, $alpha: 0.3);
+      background-color: $highlight;
+    }
+  }
+}
+
+.cta-btn {
+  @include font_titles;
+  @include text-shadow;
+  display: inline-block;
+  transition: all ease-in-out .3s;
+  padding: 12px 16px;
+  border: 1px solid $highlight;
+  border-radius: 4px;
+  background-color: transparent;
+  color: $highlight;
+  font-size: 14px;
+  line-height: 1;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba($color: $highlight, $alpha: 0.05);
+  }
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1080px) {
+
+  .container {
+    padding: 0 100px;
+  }
+
+  section {
+    padding: 75px 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    padding: 0 50px;
+  }
+
+  section {
+    padding: 50px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .container {
+    padding: 0 25px;
+  }
+
+  section {
+    padding: 40px 0px;
+  }
+}

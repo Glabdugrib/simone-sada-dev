@@ -1,0 +1,112 @@
+{
+  "nav": {
+     "home": "Home",
+     "about": "Profilo",
+     "experience": "Esperienze",
+     "projects": "Progetti",
+     "contact": "Contatti"
+  },
+  "hero": {
+    "mainTitle": "Simone Sada",
+    "subtitle": "Full Stack Web Developer"
+  },
+  "projects": {
+    "sectionName": "Progetti",
+    "comingSoon": "Prossimamente",
+    "externalLink": "Link Esterno",
+    "projectsList": [
+      {
+        "title": "Portfolio",
+        "overline": "",
+        "description": "Ecco il mio portfolio, ideato e programmato <span style=\"color: #5afed7;\">interamente da me</span>!\nPrincipali features: totalmente <span style=\"color: #5afed7;\">responsive</span>, <span style=\"color: #5afed7;\">multilingua</span>.\nNuovi progetti arriveranno presto, <span style=\"color: #5afed7;\">stay tuned!</span>",
+        "technologies": [
+          "Vue.js"
+        ],
+        "lastUpdate": "now",
+        "links": [
+          {
+            "name": "Github",
+            "url": "https://github.com/Glabdugrib/simone-sada-dev"
+          },
+          {
+            "name": "Website",
+            "url": ""
+          }
+        ],
+        "image": "Cover-Portfolio.png"
+      },
+      {
+        "title": "Wowlidays",
+        "overline": "",
+        "description": "Replica del famoso sito <span style=\"color: #5afed7;\">AirBnb</span>, creato con <span style=\"color: #5afed7;\">MVC pattern</span> and <span style=\"color: #5afed7;\">RESTful APIs</span>.\nPrincipali features: <span style=\"color: #5afed7;\">authentication</span> (3 types of user), <span style=\"color: #5afed7;\">client side</span> and <span style=\"color: #5afed7;\">server side validation</span>, pagamenti con <span style=\"color: #5afed7;\">Braintree</span>, coordinate e distanze con <span style=\"color: #5afed7;\">TomTom Api</span>, gestisci le tue case con le <span style=\"color: #5afed7;\">operazioni CRUD operations</span> quando loggato come host.",
+        "technologies": [
+          "Bootstrap",
+          "Laravel",
+          "MySQL",
+          "Vue.js"
+        ],
+        "lastUpdate": "08/10/2022",
+        "links": [
+          {
+            "name": "Github",
+            "url": "https://github.com/Glabdugrib/boolbnb-final-project"
+          },
+          {
+            "name": "Website",
+            "url": ""
+          }
+        ],
+        "image": "Cover-Wowlidays.png"
+      },
+      {
+        "title": "YearlyPlanner",
+        "overline": "",
+        "description": "Calendario per tenere traccia degli impegni e degli eventi importanti.\nPrincipali features: mesi e giorni <span style=\"color: #5afed7;\">generati dinamicamente</span>, <span style=\"color: #5afed7;\">aggiunta di nuovi eventi</span> cliccando sui singoli giorni o sul tasto +, <span style=\"color: #5afed7;\">scelta di diversi colori</span> per gli swatch degli eventi.",
+        "technologies": [
+          "Vue.js"
+        ],
+        "lastUpdate": "04/23/2022",
+        "links": [
+          {
+            "name": "Github",
+            "url": "https://github.com/Glabdugrib/yearly-planner"
+          },
+          {
+            "name": "Website",
+            "url": "https://glabdugrib.github.io/yearly-planner/"
+          }
+        ],
+        "image": "Cover-YearlyPlanner.png"
+      },
+      {
+        "title": "MineSweeper",
+        "overline": "",
+        "description": "La mia versione dell'iconico Campo Minato, creato tramite l'utilizzo di <span style=\"color: #5afed7;\">funzioni ricorsive</span>.\nIl gioco ha tutte le funzionalità dell'originale: <span style=\"color: #5afed7;\">click destro</span> per aggiungere/rimuovere bandierine.\nSono presenti anche 3 diversi <span style=\"color: #5afed7;\">livelli di difficoltà</span> ed un <span style=\"color: #5afed7;\">timer</span>.",
+        "technologies": [
+          "Javascript"
+        ],
+        "lastUpdate": "04/29/2022",
+        "links": [
+          {
+            "name": "Github",
+            "url": "https://github.com/Glabdugrib/minesweeper"
+          },
+          {
+            "name": "Website",
+            "url": "https://glabdugrib.github.io/minesweeper/"
+          }
+        ],
+        "image": "Cover-MineSweeper.png"
+      }
+    ]
+  },
+  "contacts": {
+    "sectionName": "Contatti",
+    "catchPhrase": "Hai un'<span style=\"color: #5afed7; font-weight: 600;\">idea</span> interessante da propormi?",
+    "ctaBtn": "Parliamone!",
+    "emailMessage": {
+      "subject": "Mail dal mio sito web",
+      "body": ""
+    }
+  }
+}

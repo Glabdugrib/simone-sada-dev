@@ -1,0 +1,30 @@
+@import './variables';
+
+@mixin hamburger-line {
+  width: 25px;
+  height: 4px;
+  background: $hamburger;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+@mixin text-shadow {
+  text-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.5);
+}
+
+/* FONTS */
+@mixin font_main-title {
+  font-family: "Audiowide", cursive;
+}
+
+@mixin font_titles {
+  font-family: "Roboto Mono", monospace;
+}
+
+@mixin font_default {
+  font-family: sans-serif;
+}
+
+// to add mixin:
+// @include test 
