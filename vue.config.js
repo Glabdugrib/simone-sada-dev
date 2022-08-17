@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/simonesada-dev/',
+  publicPath: '/simone-sada-dev/',
 
   pluginOptions: {
     i18n: {
