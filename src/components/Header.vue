@@ -82,7 +82,6 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/style.scss";
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 // [TODO] animazione navbar, trasparenza
 
@@ -91,56 +90,50 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0px 50px;
-  height: 80px;
-  background-color: $primary-bg;
+  z-index: 99;
   display: flex;
   align-items: center;
-  z-index: 99;
-  // border-bottom: 1px solid white;
+  padding: 0px 50px;
+  height: 80px;
   box-shadow: 0px 2px 5px rgba($color: black, $alpha: 0.6);
+  background-color: $primary-bg;
 
   .navbar {
-    width: 100%;
-    color: $lightest-text;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    @include font_titles;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    color: $lightest-text;
 
     .logo {
+      @include font_main-title;
+      @include text-shadow;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 50px;
       aspect-ratio: 1;
-      // border: 1px solid $lightest-text;
-      position: relative;
-
-      font-size: 40px;
-      // font-family: 'Bungee', cursive;
-      font-family: "Audiowide", cursive;
       transition: all ease-in-out .3s;
+      font-size: 40px;
       line-height: 1;
-      @include text-shadow;
 
       a {
-        width: 100%;
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 100%;
       }
 
       &:hover {
-        // border: 1px solid $highlight;
         color: $highlight;
       }
     }
 
-    .disabled {
+    .disabled { // temporary disabled link, WIP
       cursor: default;
-      // text-decoration: line-through;
       pointer-events: none;
       opacity: 0.3;
     }
@@ -156,10 +149,6 @@ export default {
           margin: 0 3px;
           font-size: 15px;
 
-          // &.language-switcher{
-          //   margin: 0 3px 0 6px;
-          // }
-
           a {
             padding: 10px;
 
@@ -173,13 +162,6 @@ export default {
               color: $highlight;
             }
           }
-
-          // &.disabled {
-          //   cursor: default;
-          //   // text-decoration: line-through;
-          //   pointer-events: none;
-          //   opacity: 0.3;
-          // }
 
           &.dark-mode-toggle {
             margin-right: 8px;
@@ -201,8 +183,8 @@ export default {
               justify-content: center;
               align-items: center;
               border: none;
-              background: transparent;
               padding: 5px;
+              background: transparent;
               cursor: pointer;
               transition: all ease-in-out .3s;
               color: $primary-bg;

@@ -72,7 +72,7 @@ export default {
 
   .drodown-btn {
     background-color: transparent;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    @include font_titles;
     color: $lightest-text;
     padding: 5px 10px;
     font-size: 15px;

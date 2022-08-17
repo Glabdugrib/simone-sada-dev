@@ -47,7 +47,7 @@ export default {
   border: 1px solid $light-text;
   cursor: pointer;
   transition: transform ease-in-out .2s;
-  font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  @include font_titles;
 
   &:hover {
     transform: scale(1.03);

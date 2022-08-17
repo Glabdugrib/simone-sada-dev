@@ -137,8 +137,7 @@ export default {
   justify-content: flex-end;
   width: 100%;
   margin-bottom: 120px;
-  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif; // [TODO] check fonts
+  @include font_default;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -192,7 +191,7 @@ export default {
 
     .project-overline {
       margin: 10px 0;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      @include font_titles;
       font-size: 14px;
       color: $highlight;
     }
@@ -204,7 +203,7 @@ export default {
       font-size: clamp(24px, 5vw, 28px);
       // color: $lightest-text;
       color: $highlight;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      @include font_titles;
       @include text-shadow;
       text-align: right;
 
@@ -232,7 +231,7 @@ export default {
       justify-content: flex-end;
       gap: 20px;
       margin: 25px 0 10px 0;
-      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      @include font_titles;
       color: $light-text;
       flex-wrap: wrap;
       line-height: .5;
